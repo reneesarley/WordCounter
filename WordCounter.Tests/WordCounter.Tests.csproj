@@ -15,4 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\WordCounter\WordCounter.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models.Tests\UnitTest1.cs" />
+  </ItemGroup>
 </Project>
