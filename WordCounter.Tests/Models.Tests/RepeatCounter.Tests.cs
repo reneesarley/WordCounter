@@ -112,5 +112,24 @@ namespace WordCounter.Tests
             //Assert
             CollectionAssert.AreEqual(resultList, testList);
         }
+
+        [TestMethod]
+        public void UpdateWordCounter_ReturnOneDueToOneMatchingWord_Int()
+        {
+            //Arrange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            newRepeatCounter.SetStringToSearch("Bob fell on his back");
+            newRepeatCounter.SetWordToFind("back");
+            string testSentence = newRepeatCounter.GetStringToSearch();
+            string testWord = newRepeatCounter.GetWordToFind();
+
+
+            //Act
+            newRepeatCounter.UpdateWordCounter();
+            int result = newRepeatCounter.GetWordCounter();
+
+            //Assert
+            Assert.AreEqual(result, 0);
+        }
     }
 }

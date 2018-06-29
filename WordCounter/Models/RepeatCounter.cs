@@ -58,5 +58,15 @@ namespace WordCounter
 
             return wordsToCompare;
         }
+
+        public void UpdateWordCounter()
+        {
+            List<string> wordsToCompare = new List<string>();
+            wordsToCompare = this.ConvertStringToList(_stringToSearch);
+            for (int i = 0; i < wordsToCompare.Count; ++i)
+            {
+                _wordCounter = _wordCounter + (CompareWords(_wordToFind, wordsToCompare[i]));
+            }
+        }
     }
 }
