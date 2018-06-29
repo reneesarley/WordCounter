@@ -129,7 +129,25 @@ namespace WordCounter.Tests
             int result = newRepeatCounter.GetWordCounter();
 
             //Assert
-            Assert.AreEqual(result, 0);
+            Assert.AreEqual(result, 1);
+        }
+        [TestMethod]
+        public void UpdateWordCounter_ReturnThreeDueToThreeMatchingWords_Int()
+        {
+            //Arrange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            newRepeatCounter.SetStringToSearch("Bob fell on his back but didn't hurt his back so he got back up");
+            newRepeatCounter.SetWordToFind("back");
+            string testSentence = newRepeatCounter.GetStringToSearch();
+            string testWord = newRepeatCounter.GetWordToFind();
+
+
+            //Act
+            newRepeatCounter.UpdateWordCounter();
+            int result = newRepeatCounter.GetWordCounter();
+
+            //Assert
+            Assert.AreEqual(result, 1);
         }
     }
 }
