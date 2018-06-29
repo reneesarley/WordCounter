@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace WordCounter
 {
     public class RepeatCounter
@@ -49,6 +50,13 @@ namespace WordCounter
             {
                 return 0;
             }
+        }
+
+        public List<string> ConvertStringToList(string inputtedString)
+        {
+            List<string> wordsToCompare = new List<string>(inputtedString.Split(' '));
+
+            return wordsToCompare;
         }
     }
 }

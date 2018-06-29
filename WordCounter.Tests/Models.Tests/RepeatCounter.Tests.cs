@@ -1,5 +1,6 @@
 ﻿using System;
 using WordCounter;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace WordCounter.Tests
@@ -95,6 +96,21 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(resultOne, 1);
             Assert.AreEqual(resultTwo, 1);
+        }
+
+        [TestMethod]
+        public void ConvertStringToList_()
+        {
+            //Arrange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            string testString = "Bob fell on his back";
+            List<string> testList = new List<string>(){ "Bob", "didnt", "fell", "on", "his", "back" };
+
+            //Act
+            List<string> resultList = newRepeatCounter.ConvertStringToList(testString);
+
+            //Assert
+            CollectionAssert.AreEqual(resultList, testList);
         }
     }
 }
