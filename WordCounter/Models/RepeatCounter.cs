@@ -17,5 +17,15 @@ namespace WordCounter
             return _wordCounter;
         }
 
+        public void SetWordToFind(string inputtedWord)
+        {
+            _wordToFind = inputtedWord;
+        }
+
+        public string GetWordToFind()
+        {
+            return _wordToFind;
+        }
+
     }
 }
