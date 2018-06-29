@@ -20,6 +20,9 @@ _Both the word to search for and the string will be provided by the user._
 
 |Behavior  |     Input     | Output|
 |:----------:|:-------------:|:------:|
+| Get current value of the wordCounter|  | 0 |
+| Set the value of wordToFind to an inputted word | back  | wordToCompare = "back" |
+| Set the value of stringToSearch| Joe fell on his back.  | stringToSearch = "Joe fell on his back."|
 | If two words are equal to each other return 1| back, back | 1 |
 | If two words are not equal to each other return 0 | back, backwards | 0 |
 | Change all letters to lowercase in a word| Back | back|
