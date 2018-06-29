@@ -31,6 +31,7 @@ _Both the word to search for and the string will be provided by the user._
 | Pass sentence with three matching words and update word counter to 3| Bob fell on his back but didn't hurt his back so he got back up. | wordCount = 3 |
 | Pass sentence with no matching words and update word counter to 0| Bob fell on his face | wordCount = 0 |
 | Remove any non-letters (numbers and punctuation) from the end of a word | back, | back |
+| Don't remove non-letters from anywhere but the end of the word | To-Do  | To-do |
 
 
 ## Known Bugs
