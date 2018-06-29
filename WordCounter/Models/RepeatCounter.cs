@@ -34,21 +34,9 @@ namespace WordCounter
         {
             _stringToSearch = inputtedString;
         }
-
         public string GetStringToSearch()
         {
             return _stringToSearch;
-        }
-        public int CompareWords(string mainWord, string wordToCompare)
-        {
-            if (StripPunctuation(wordToCompare.ToLower()) == mainWord.ToLower())
-            {
-                return 1;
-            }
-            else
-            {
-                return 0;
-            }
         }
 
         public void UpdateWordCounter()
@@ -57,7 +45,10 @@ namespace WordCounter
             wordsToCompare = (new List<string>(_stringToSearch.Split(' ')));
             for (int i = 0; i < wordsToCompare.Count; ++i)
             {
-                _wordCounter = _wordCounter + (CompareWords(_wordToFind, wordsToCompare[i]));
+                if (StripPunctuation(wordsToCompare[i].ToLower()) == _wordToFind.ToLower())
+                {
+                    _wordCounter = ++_wordCounter;
+                }
             }
         }
 

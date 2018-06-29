@@ -52,67 +52,67 @@ namespace WordCounter.Tests
             Assert.AreEqual(resultString, testString);
         }
 
-        [TestMethod]
-        public void CompareWords_ReturnOneWhenWordsMatch_Int()
-        {
-            //Arange
-            RepeatCounter newRepeatCounter = new RepeatCounter();
-            string testWord = "back";
+        //[TestMethod]
+        //public void CompareWords_ReturnOneWhenWordsMatch_Int()
+        //{
+        //    //Arange
+        //    RepeatCounter newRepeatCounter = new RepeatCounter();
+        //    string testWord = "back";
 
-            //Act
-            int result =newRepeatCounter.CompareWords(testWord, testWord);
+        //    //Act
+        //    int result =newRepeatCounter.CompareWords(testWord, testWord);
 
-            //Assert
-            Assert.AreEqual(result, 1);
-        }
+        //    //Assert
+        //    Assert.AreEqual(result, 1);
+        //}
 
-        [TestMethod]
-        public void CompareWords_ReturnZeroWhenWordsDontMatch_Int()
-        {
-            //Arange
-            RepeatCounter newRepeatCounter = new RepeatCounter();
-            string testWord = "back";
-            string testWordTwo = "backwards";
+        //[TestMethod]
+        //public void CompareWords_ReturnZeroWhenWordsDontMatch_Int()
+        //{
+        //    //Arange
+        //    RepeatCounter newRepeatCounter = new RepeatCounter();
+        //    string testWord = "back";
+        //    string testWordTwo = "backwards";
 
-            //Act
-            int result = newRepeatCounter.CompareWords(testWord, testWordTwo);
+        //    //Act
+        //    int result = newRepeatCounter.CompareWords(testWord, testWordTwo);
 
-            //Assert
-            Assert.AreEqual(result, 0);
-        }
+        //    //Assert
+        //    Assert.AreEqual(result, 0);
+        //}
 
-        [TestMethod]
-        public void CompareWords_ReturnOneWhenWordWithPuncMatches_Int()
-        {
-            //Arange
-            RepeatCounter newRepeatCounter = new RepeatCounter();
-            string testWord = "back,";
+        //[TestMethod]
+        //public void CompareWords_ReturnOneWhenWordWithPuncMatches_Int()
+        //{
+        //    //Arange
+        //    RepeatCounter newRepeatCounter = new RepeatCounter();
+        //    string testWord = "back,";
 
-            //Act
-            int result = newRepeatCounter.CompareWords("back", testWord);
+        //    //Act
+        //    int result = newRepeatCounter.CompareWords("back", testWord);
 
-            //Assert
-            Assert.AreEqual(result, 1);
-        }
+        //    //Assert
+        //    Assert.AreEqual(result, 1);
+        //}
 
-        [TestMethod]
-        public void CompareWords_ConvertUpperCaseToLower_Int()
-        {
-            //Arange
-            RepeatCounter newRepeatCounter = new RepeatCounter();
-            string testWord = "BACK";
-            string testWordTwo = "back";
+        //[TestMethod]
+        //public void CompareWords_ConvertUpperCaseToLower_Int()
+        //{
+        //    //Arange
+        //    RepeatCounter newRepeatCounter = new RepeatCounter();
+        //    string testWord = "BACK";
+        //    string testWordTwo = "back";
            
 
-            //Act
-            int resultOne = newRepeatCounter.CompareWords(testWord, testWordTwo);
-            int resultTwo = newRepeatCounter.CompareWords(testWordTwo, testWord);
+        //    //Act
+        //    int resultOne = newRepeatCounter.CompareWords(testWord, testWordTwo);
+        //    int resultTwo = newRepeatCounter.CompareWords(testWordTwo, testWord);
 
 
-            //Assert
-            Assert.AreEqual(resultOne, 1);
-            Assert.AreEqual(resultTwo, 1);
-        }
+        //    //Assert
+        //    Assert.AreEqual(resultOne, 1);
+        //    Assert.AreEqual(resultTwo, 1);
+        //}
 
 
         [TestMethod]
