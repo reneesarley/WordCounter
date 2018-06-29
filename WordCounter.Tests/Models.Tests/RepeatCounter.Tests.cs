@@ -194,5 +194,18 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, "back");
         }
+        [TestMethod]
+        public void StripPunctuation_OnlyRemovePunctuationAtEndOfWord_String()
+        {
+            //Arange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            string testWord = "To-Do";
+
+            //Act
+            string result = newRepeatCounter.StripPunctuation(testWord);
+
+            //Assert
+            Assert.AreEqual(result, "To-Do");
+        }
     }
 }
