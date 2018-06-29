@@ -92,7 +92,7 @@ namespace WordCounter.Tests
             int result = newRepeatCounter.CompareWords(testWord, testWord);
 
             //Assert
-            Assert.AreEqual(result, 0);
+            Assert.AreEqual(result, 1);
         }
 
         [TestMethod]
