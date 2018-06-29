@@ -44,10 +44,7 @@ namespace WordCounter
             mainWord = mainWord.ToLower();
             wordToCompare = wordToCompare.ToLower();
 
-            if (mainWord == wordToCompare)
-            {
-                return 1;
-            } else if (StripPunctuation(wordToCompare) == mainWord)
+            if (StripPunctuation(wordToCompare) == mainWord)
             {
                 return 1;
             }

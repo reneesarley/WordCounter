@@ -89,7 +89,7 @@ namespace WordCounter.Tests
             string testWord = "back,";
 
             //Act
-            int result = newRepeatCounter.CompareWords(testWord, testWord);
+            int result = newRepeatCounter.CompareWords("back", testWord);
 
             //Assert
             Assert.AreEqual(result, 1);
