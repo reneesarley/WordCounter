@@ -147,7 +147,7 @@ namespace WordCounter.Tests
             int result = newRepeatCounter.GetWordCounter();
 
             //Assert
-            Assert.AreEqual(result, 1);
+            Assert.AreEqual(result, 3);
         }
     }
 }
