@@ -38,8 +38,8 @@ namespace WordCounter
         }
         public int CompareWords(string mainWord, string wordToCompare)
         {
-            //mainWord = mainWord.ToLower;
-            //wordToCompare = wordToCompare.ToLower;
+            mainWord = mainWord.ToLower();
+            wordToCompare = wordToCompare.ToLower();
 
             if (mainWord == wordToCompare)
             {
