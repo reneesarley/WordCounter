@@ -33,7 +33,7 @@ namespace WordCounter.Tests
             string resultWord = newRepeatCounter.GetWordToFind();
 
             //Assert
-            Assert.AreEqual(resultWord, "dog");
+            Assert.AreEqual(resultWord, testWord);
         }
     }
 }
