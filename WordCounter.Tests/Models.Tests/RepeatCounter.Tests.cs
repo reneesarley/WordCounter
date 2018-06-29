@@ -48,7 +48,7 @@ namespace WordCounter.Tests
             string resultString = newRepeatCounter.GetStringToSearch();
 
             //Assert
-            Assert.AreEqual(resultString, "bob didn't fall");
+            Assert.AreEqual(resultString, testString);
         }
     }
 }
