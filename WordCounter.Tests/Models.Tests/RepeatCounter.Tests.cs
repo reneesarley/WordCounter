@@ -115,22 +115,6 @@ namespace WordCounter.Tests
         }
 
 
-
-        [TestMethod]
-        public void ConvertStringToList_()
-        {
-            //Arange
-            RepeatCounter newRepeatCounter = new RepeatCounter();
-            string testString = "Bob fell on his back";
-            List<string> testList = new List<string>(){ "Bob", "fell", "on", "his", "back" };
-
-            //Act
-            List<string> resultList = newRepeatCounter.ConvertStringToList(testString);
-
-            //Assert
-            CollectionAssert.AreEqual(resultList, testList);
-        }
-
         [TestMethod]
         public void UpdateWordCounter_ReturnOneDueToOneMatchingWord_Int()
         {

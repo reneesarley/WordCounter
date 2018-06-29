@@ -41,10 +41,7 @@ namespace WordCounter
         }
         public int CompareWords(string mainWord, string wordToCompare)
         {
-            mainWord = mainWord.ToLower();
-            wordToCompare = wordToCompare.ToLower();
-
-            if (StripPunctuation(wordToCompare) == mainWord)
+            if (StripPunctuation(wordToCompare.ToLower()) == mainWord.ToLower())
             {
                 return 1;
             }
@@ -54,17 +51,10 @@ namespace WordCounter
             }
         }
 
-        public List<string> ConvertStringToList(string inputtedString)
-        {
-            List<string> wordsToCompare = new List<string>(inputtedString.Split(' '));
-
-            return wordsToCompare;
-        }
-
         public void UpdateWordCounter()
         {
             List<string> wordsToCompare = new List<string>();
-            wordsToCompare = this.ConvertStringToList(_stringToSearch);
+            wordsToCompare = (new List<string>(_stringToSearch.Split(' ')));
             for (int i = 0; i < wordsToCompare.Count; ++i)
             {
                 _wordCounter = _wordCounter + (CompareWords(_wordToFind, wordsToCompare[i]));
