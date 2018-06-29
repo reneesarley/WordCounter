@@ -65,6 +65,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, 1);
         }
+
         [TestMethod]
         public void CompareWords_ReturnZeroWhenWordsDontMatch_Int()
         {
@@ -79,6 +80,21 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, 0);
         }
+
+        [TestMethod]
+        public void CompareWords_ReturnOneWhenWordWithPuncMatches_Int()
+        {
+            //Arange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            string testWord = "back,";
+
+            //Act
+            int result = newRepeatCounter.CompareWords(testWord, testWord);
+
+            //Assert
+            Assert.AreEqual(result, 0);
+        }
+
         [TestMethod]
         public void CompareWords_ConvertUpperCaseToLower_Int()
         {
@@ -97,6 +113,8 @@ namespace WordCounter.Tests
             Assert.AreEqual(resultOne, 1);
             Assert.AreEqual(resultTwo, 1);
         }
+
+
 
         [TestMethod]
         public void ConvertStringToList_()

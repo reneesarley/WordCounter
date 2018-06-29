@@ -47,6 +47,9 @@ namespace WordCounter
             if (mainWord == wordToCompare)
             {
                 return 1;
+            } else if (StripPunctuation(wordToCompare) == mainWord)
+            {
+                return 1;
             }
             else
             {
