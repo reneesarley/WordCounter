@@ -20,7 +20,11 @@ _Both the word to search for and the string will be provided by the user._
 
 |Behavior  |     Input     | Output|
 |:----------:|:-------------:|:------:|
-| Specs here | input | output |
+| If two words are equal to each other return 1| back, back | 1 |
+| If two words are not equal to each other return 0 | back, backwards | 0 |
+| Change all letters to lowercase in a word| Back | back|
+| Divide a sentence into individual words | "Bob fell on his back." | {"Bob", "fell", "on", "his", "back."} |
+| Remove any non-letters (numbers and punctuation) from the end of a word | back, | back |
 
 
 ## Known Bugs
