@@ -34,43 +34,21 @@ namespace WordCounter
         {
             _stringToSearch = inputtedString;
         }
-
         public string GetStringToSearch()
         {
             return _stringToSearch;
-        }
-        public int CompareWords(string mainWord, string wordToCompare)
-        {
-            mainWord = mainWord.ToLower();
-            wordToCompare = wordToCompare.ToLower();
-
-            if (mainWord == wordToCompare)
-            {
-                return 1;
-            } else if (StripPunctuation(wordToCompare) == mainWord)
-            {
-                return 1;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-
-        public List<string> ConvertStringToList(string inputtedString)
-        {
-            List<string> wordsToCompare = new List<string>(inputtedString.Split(' '));
-
-            return wordsToCompare;
         }
 
         public void UpdateWordCounter()
         {
             List<string> wordsToCompare = new List<string>();
-            wordsToCompare = this.ConvertStringToList(_stringToSearch);
+            wordsToCompare = (new List<string>(_stringToSearch.Split(' ')));
             for (int i = 0; i < wordsToCompare.Count; ++i)
             {
-                _wordCounter = _wordCounter + (CompareWords(_wordToFind, wordsToCompare[i]));
+                if (StripPunctuation(wordsToCompare[i].ToLower()) == _wordToFind.ToLower())
+                {
+                    _wordCounter = ++_wordCounter;
+                }
             }
         }
 
@@ -85,7 +63,6 @@ namespace WordCounter
                 }
             }
             return noPunctuationString.ToString();
-
         }
     }
 }

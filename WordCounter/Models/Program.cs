@@ -17,6 +17,7 @@ namespace WordCounter
             newRepeatCounter.UpdateWordCounter();
             int wordCount = newRepeatCounter.GetWordCounter();
             Console.WriteLine(wordCount);
+            ///this is a test 
 
         }
     }
