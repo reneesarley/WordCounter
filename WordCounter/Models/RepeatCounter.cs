@@ -36,6 +36,16 @@ namespace WordCounter
         {
             return _stringToSearch;
         }
-
+        public int CompareWords(string mainWord, string wordToCompare)
+        {
+            if (mainWord == wordToCompare)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }
