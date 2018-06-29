@@ -74,13 +74,13 @@ namespace WordCounter
         public string StripPunctuation(string word)
         {
             var noPunctuationString = new StringBuilder();
-            //for (int i = 0; i < word.Length; ++i)
-            //{
-            //    if (!Char.IsPunctuation(word[i]))
-            //    {
-            //        noPunctuationString.Append(word[i]);
-            //    }
-            //}
+            for (int i = 0; i < word.Length; ++i)
+            {
+                if (!Char.IsPunctuation(word[i]))
+                {
+                    noPunctuationString.Append(word[i]);
+                }
+            }
             return noPunctuationString.ToString();
 
         }
