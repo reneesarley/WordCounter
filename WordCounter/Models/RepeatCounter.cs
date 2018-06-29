@@ -14,7 +14,7 @@ namespace WordCounter
 
         public int GetWordCounter()
         {
-            return 2;
+            return _wordCounter;
         }
 
     }
