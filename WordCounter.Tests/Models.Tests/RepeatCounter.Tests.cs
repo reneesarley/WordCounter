@@ -70,9 +70,10 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             string testWord = "back";
+            string testWordTwo = "backNot";
 
             //Act
-            int result = newRepeatCounter.CompareWords(testWord, testWord);
+            int result = newRepeatCounter.CompareWords(testWord, testWordTwo);
 
             //Assert
             Assert.AreEqual(result, 0);
