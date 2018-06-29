@@ -35,5 +35,20 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(resultWord, testWord);
         }
+
+        [TestMethod]
+        public void SetGetStringToSearch_SetAndGetValueOfStringToSearch_String()
+        {
+            //Arrange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            string testString = "Bob fell on his back";
+
+            //Act
+            newRepeatCounter.SetStringToSearch(testString);
+            string resultString = newRepeatCounter.GetStringToSearch();
+
+            //Assert
+            Assert.AreEqual(resultString, "bob didn't fall");
+        }
     }
 }

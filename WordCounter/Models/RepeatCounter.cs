@@ -27,5 +27,15 @@ namespace WordCounter
             return _wordToFind;
         }
 
+        public void SetStringToSearch(string inputtedString)
+        {
+            _stringToSearch = inputtedString;
+        }
+
+        public string GetStringToSearch()
+        {
+            return _stringToSearch;
+        }
+
     }
 }
