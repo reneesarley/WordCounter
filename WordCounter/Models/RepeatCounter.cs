@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+
 namespace WordCounter
 {
     public class RepeatCounter
@@ -67,6 +69,20 @@ namespace WordCounter
             {
                 _wordCounter = _wordCounter + (CompareWords(_wordToFind, wordsToCompare[i]));
             }
+        }
+
+        public string StripPunctuation(string word)
+        {
+            var noPunctuationString = new StringBuilder();
+            //for (int i = 0; i < word.Length; ++i)
+            //{
+            //    if (!Char.IsPunctuation(word[i]))
+            //    {
+            //        noPunctuationString.Append(word[i]);
+            //    }
+            //}
+            return noPunctuationString.ToString();
+
         }
     }
 }

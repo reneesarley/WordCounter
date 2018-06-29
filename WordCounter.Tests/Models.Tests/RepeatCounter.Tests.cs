@@ -12,7 +12,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void GetWordCounter_ReturnCurrentValueOfWordCounter_Int()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
 
             //Act
@@ -25,7 +25,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void SetGetWordToFind_SetAndGetValueOfWordToFind_String()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             string testWord = "back";
 
@@ -40,7 +40,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void SetGetStringToSearch_SetAndGetValueOfStringToSearch_String()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             string testString = "Bob fell on his back";
 
@@ -55,7 +55,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void CompareWords_ReturnOneWhenWordsMatch_Int()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             string testWord = "back";
 
@@ -68,10 +68,10 @@ namespace WordCounter.Tests
         [TestMethod]
         public void CompareWords_ReturnZeroWhenWordsDontMatch_Int()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             string testWord = "back";
-            string testWordTwo = "backNot";
+            string testWordTwo = "backwards";
 
             //Act
             int result = newRepeatCounter.CompareWords(testWord, testWordTwo);
@@ -82,7 +82,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void CompareWords_ConvertUpperCaseToLower_Int()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             string testWord = "BACK";
             string testWordTwo = "back";
@@ -101,7 +101,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void ConvertStringToList_()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             string testString = "Bob fell on his back";
             List<string> testList = new List<string>(){ "Bob", "fell", "on", "his", "back" };
@@ -116,7 +116,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void UpdateWordCounter_ReturnOneDueToOneMatchingWord_Int()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             newRepeatCounter.SetStringToSearch("Bob fell on his back");
             newRepeatCounter.SetWordToFind("back");
@@ -134,7 +134,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void UpdateWordCounter_ReturnThreeDueToThreeMatchingWords_Int()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             newRepeatCounter.SetStringToSearch("Bob fell on his back but didn't hurt his back so he got back up");
             newRepeatCounter.SetWordToFind("back");
@@ -152,7 +152,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void UpdateWordCounter_ReturnZeroDueToNoMatchingWords_Int()
         {
-            //Arrange
+            //Arange
             RepeatCounter newRepeatCounter = new RepeatCounter();
             newRepeatCounter.SetStringToSearch("Bob fell on his face");
             newRepeatCounter.SetWordToFind("back");
@@ -165,7 +165,21 @@ namespace WordCounter.Tests
             int result = newRepeatCounter.GetWordCounter();
 
             //Assert
-            Assert.AreEqual(result, 3);
+            Assert.AreEqual(result, 0);
+        }
+        [TestMethod]
+        public void StripPunctuation_RemoveAllPunctuation_String()
+        {
+            //Arange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            string testWord = "back.";
+
+            //Act
+            string result = newRepeatCounter.StripPunctuation(testWord);
+
+            //Assert
+            Assert.AreEqual(result, "back");
+
         }
     }
 }
