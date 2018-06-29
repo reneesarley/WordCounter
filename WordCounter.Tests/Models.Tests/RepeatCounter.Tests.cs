@@ -149,5 +149,23 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, 3);
         }
+        [TestMethod]
+        public void UpdateWordCounter_ReturnZeroDueToNoMatchingWords_Int()
+        {
+            //Arrange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            newRepeatCounter.SetStringToSearch("Bob fell on his face");
+            newRepeatCounter.SetWordToFind("back");
+            string testSentence = newRepeatCounter.GetStringToSearch();
+            string testWord = newRepeatCounter.GetWordToFind();
+
+
+            //Act
+            newRepeatCounter.UpdateWordCounter();
+            int result = newRepeatCounter.GetWordCounter();
+
+            //Assert
+            Assert.AreEqual(result, 3);
+        }
     }
 }
