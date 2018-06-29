@@ -27,7 +27,7 @@ _Both the word to search for and the string will be provided by the user._
 | If two words are not equal to each other return 0 | back, backwards | 0 |
 | Change all letters to lowercase in a word| Back | back|
 | Divide a sentence into individual words | "Bob fell on his back." | {"Bob", "fell", "on", "his", "back."} |
-| Pass each word in a list to CompareWords method, add result to wordCount| "back"| wordCount + 1 |
+| Pass each word in a list to CompareWords method, add result to wordCount| "Bob", "fell" "on" "his" "back"| wordCount + 1 |
 | Remove any non-letters (numbers and punctuation) from the end of a word | back, | back |
 
 
