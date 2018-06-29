@@ -64,5 +64,18 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, 1);
         }
+        [TestMethod]
+        public void CompareWords_ReturnZeroWhenWordsDontMatch_Int()
+        {
+            //Arrange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            string testWord = "back";
+
+            //Act
+            int result = newRepeatCounter.CompareWords(testWord, testWord);
+
+            //Assert
+            Assert.AreEqual(result, 0);
+        }
     }
 }
