@@ -78,5 +78,23 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, 0);
         }
+        [TestMethod]
+        public void CompareWords_ConvertUpperCaseToLower_Int()
+        {
+            //Arrange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            string testWord = "BACK";
+            string testWordTwo = "back";
+           
+
+            //Act
+            int resultOne = newRepeatCounter.CompareWords(testWord, testWordTwo);
+            int resultTwo = newRepeatCounter.CompareWords(testWordTwo, testWord);
+
+
+            //Assert
+            Assert.AreEqual(resultOne, 1);
+            Assert.AreEqual(resultTwo, 1);
+        }
     }
 }
