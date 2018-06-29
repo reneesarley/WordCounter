@@ -57,15 +57,26 @@ namespace WordCounter
             var noPunctuationString = new StringBuilder();
             for (int i = 0; i < word.Length; ++i)
             {
-                if (!Char.IsPunctuation(word[i]) && i == word.Length -1)
+                if (!Char.IsPunctuation(word[i]) && i == word.Length - 1)
                 {
                     noPunctuationString.Append(word[i]);
-                } else if (i != word.Length -1 )
+                }
+                else if (i != word.Length - 1)
                 {
                     noPunctuationString.Append(word[i]);
                 }
             }
             return noPunctuationString.ToString();
+        }
+        public bool VerifyJustOneWord()
+        {
+            if(_wordToFind.Contains(" "))
+            {
+                return false;
+            } else 
+            {
+                return true;
+            }
         }
     }
 }

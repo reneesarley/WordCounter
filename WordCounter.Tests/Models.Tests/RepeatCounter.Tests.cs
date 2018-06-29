@@ -207,5 +207,21 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, "To-Do");
         }
+
+        [TestMethod]
+        public void VerifyJustOneWord_ReturnFalseIfSpacesAreFound_Boolen()
+        {
+            //Arange
+            RepeatCounter newRepeatCounter = new RepeatCounter();
+            string testWord = "Two Words";
+
+            //Act
+            newRepeatCounter.SetWordToFind(testWord);
+            bool result = newRepeatCounter.VerifyJustOneWord();
+
+            //Assert
+            Assert.AreEqual(result, false);
+            
+        }
     }
 }

@@ -13,7 +13,7 @@ _Both the word to search for and the string will be provided by the user._
 
 * _Downloaded the project from the GitHub repo here: https://github.com/reneesarley/WordCounter.git_
 * _Compile the Program.cs and RepeatCounter.cs files in the terminal using: $ mcs Program.cs RepeatCounter.cs_
-* _If using Mono, run the Program.exe file using: $ mono Program.cs_
+* _If using Mono, run the Program.exe file using: $ mono Program.exe_
 
 ## Specifications
 
@@ -30,8 +30,8 @@ _Both the word to search for and the string will be provided by the user._
 | Pass sentence with one matching word and update word counter to 1| Bob fell on his back | wordCount = 1 |
 | Pass sentence with three matching words and update word counter to 3| Bob fell on his back but didn't hurt his back so he got back up. | wordCount = 3 |
 | Pass sentence with no matching words and update word counter to 0| Bob fell on his face | wordCount = 0 |
-| Remove any non-letters (numbers and punctuation) from the end of a word | back, | back |
-| Don't remove non-letters from anywhere but the end of the word | To-Do  | To-do |
+| Remove any punctuation (numbers and punctuation) from the end of a word | back, | back |
+| Don't remove punctuation from anywhere but the end of the word | To-Do  | To-Do |
 
 
 ## Known Bugs
